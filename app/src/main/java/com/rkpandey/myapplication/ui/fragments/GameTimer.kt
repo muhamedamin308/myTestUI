@@ -10,7 +10,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.rkpandey.myapplication.R
-import java.util.concurrent.Flow
 
 class GameTimer(private val getContext : Context) : Fragment()
 {
@@ -34,11 +33,12 @@ class GameTimer(private val getContext : Context) : Fragment()
 
         ll15mins.setOnClickListener {
             val selectPlayers = SelectPlayers(getContext)
-            val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-            transaction?.replace(R.id.splashierContainer, selectPlayers)
-            transaction?.disallowAddToBackStack()
-            transaction?.commit()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                                      , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                ?.replace(R.id.splashierContainer,selectPlayers )
+                ?.disallowAddToBackStack()
+                ?.commit()
         }
         ll30mins.setOnClickListener {
             Toast.makeText(getContext , "30 mins is not allowed yet" , Toast.LENGTH_SHORT).show()
@@ -48,11 +48,12 @@ class GameTimer(private val getContext : Context) : Fragment()
         }
         backTimer.setOnClickListener {
             val categories = Categories(getContext)
-            val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-            transaction?.replace(R.id.splashierContainer, categories)
-            transaction?.disallowAddToBackStack()
-            transaction?.commit()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                                      , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                ?.replace(R.id.splashierContainer,categories )
+                ?.disallowAddToBackStack()
+                ?.commit()
         }
         return view
     }

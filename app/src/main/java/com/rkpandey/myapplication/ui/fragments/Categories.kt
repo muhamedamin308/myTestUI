@@ -30,11 +30,12 @@ class Categories (private val getContext : Context) : Fragment() , CategoriesAda
         recyclerView.setHasFixedSize(true)
         menu.setOnClickListener {
             val manageSubscription = ManageSubscription(getContext)
-            val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-            transaction?.replace(R.id.splashierContainer, manageSubscription)
-            transaction?.disallowAddToBackStack()
-            transaction?.commit()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                                      , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                ?.replace(R.id.splashierContainer,manageSubscription )
+                ?.disallowAddToBackStack()
+                ?.commit()
         }
         return view
     }
@@ -42,10 +43,11 @@ class Categories (private val getContext : Context) : Fragment() , CategoriesAda
     override fun onClickItem(position : Int)
     {
         val gameTimer = GameTimer(getContext)
-        val transaction = activity?.supportFragmentManager?.beginTransaction()
-        transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-        transaction?.replace(R.id.splashierContainer, gameTimer)
-        transaction?.disallowAddToBackStack()
-        transaction?.commit()
+        activity?.supportFragmentManager?.beginTransaction()
+            ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                                  , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+            ?.replace(R.id.splashierContainer,gameTimer )
+            ?.disallowAddToBackStack()
+            ?.commit()
     }
 }

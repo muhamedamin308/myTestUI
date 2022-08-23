@@ -1,7 +1,6 @@
 package com.rkpandey.myapplication.ui.fragments
 
 import android.content.Context
-import android.media.Image
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.cardview.widget.CardView
 import com.google.android.material.card.MaterialCardView
 import com.rkpandey.myapplication.R
-import kotlin.math.sin
 
 class SelectPlayers(private var getContext : Context) : Fragment()
 {
@@ -38,11 +35,12 @@ class SelectPlayers(private var getContext : Context) : Fragment()
         }
         backArrow.setOnClickListener {
             val gameTimer = GameTimer(getContext)
-            val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-            transaction?.replace(R.id.splashierContainer, gameTimer)
-            transaction?.disallowAddToBackStack()
-            transaction?.commit()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                                      , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                ?.replace(R.id.splashierContainer,gameTimer )
+                ?.disallowAddToBackStack()
+                ?.commit()
         }
         continueArrow.setOnClickListener {
             Toast.makeText(getContext , "Continue to Quiz Game is Activated now", Toast.LENGTH_SHORT).show()

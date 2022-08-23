@@ -22,11 +22,12 @@ class subscriptionSkip(private val getContext : Context) : Fragment()
         skipnow = view.findViewById(R.id.skipNow)
         skipnow.setOnClickListener {
             val categories = Categories(getContext)
-            val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-            transaction?.replace(R.id.splashierContainer, categories)
-            transaction?.disallowAddToBackStack()
-            transaction?.commit()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                ?.replace(R.id.splashierContainer, categories)
+                ?.disallowAddToBackStack()
+                ?.commit()
         }
         return view
     }

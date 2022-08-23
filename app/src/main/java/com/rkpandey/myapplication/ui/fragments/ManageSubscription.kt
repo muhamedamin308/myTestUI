@@ -1,7 +1,6 @@
 package com.rkpandey.myapplication.ui.fragments
 
 import android.content.Context
-import android.media.Image
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -23,11 +22,12 @@ class ManageSubscription(private val getContext : Context) : Fragment()
         backIc = view.findViewById(R.id.backManage)
         backIc.setOnClickListener {
             val categoriesFragment = Categories(getContext)
-            val transaction = activity?.supportFragmentManager?.beginTransaction()
-            transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-            transaction?.replace(R.id.splashierContainer, categoriesFragment)
-            transaction?.disallowAddToBackStack()
-            transaction?.commit()
+            activity?.supportFragmentManager?.beginTransaction()
+                ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                                      , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                ?.replace(R.id.splashierContainer,categoriesFragment )
+                ?.disallowAddToBackStack()
+                ?.commit()
         }
         return view
     }

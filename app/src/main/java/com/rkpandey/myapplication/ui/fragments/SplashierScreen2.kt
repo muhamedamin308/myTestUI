@@ -8,8 +8,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.rkpandey.myapplication.R
 
 class SplashierScreen2(private val getContext : Context) : Fragment()
@@ -28,11 +26,12 @@ class SplashierScreen2(private val getContext : Context) : Fragment()
             handler.postDelayed(
                 Runnable {
                     val subscription = subscriptionSkip(getContext)
-                    val transaction = activity?.supportFragmentManager?.beginTransaction()
-                    transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
-                    transaction?.replace(R.id.splashierContainer, subscription)
-                    transaction?.disallowAddToBackStack()
-                    transaction?.commit()
+                    activity?.supportFragmentManager?.beginTransaction()
+                        ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
+                                              , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                        ?.replace(R.id.splashierContainer,subscription )
+                        ?.disallowAddToBackStack()
+                        ?.commit()
                 },2500)
         }
         return view
