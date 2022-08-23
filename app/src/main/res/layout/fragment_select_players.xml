@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragments.SelectPlayers">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.000">
+
+        <ImageView
+            android:id="@+id/backSelected"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:contentDescription="@string/categories_menu"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/ChoosePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/choose_player"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_20ssp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/singlePlayer"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_95sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_single" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvSingle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/single_player"
+        android:textColor="@color/ground"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="@+id/singlePlayer"
+        app:layout_constraintStart_toStartOf="@+id/singlePlayer"
+        app:layout_constraintTop_toBottomOf="@+id/singlePlayer" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/twoPlayer"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_95sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_two" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/twoPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/two_players"
+        android:textColor="@color/ground"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="@+id/twoPlayer"
+        app:layout_constraintStart_toStartOf="@+id/twoPlayer"
+        app:layout_constraintTop_toBottomOf="@+id/twoPlayer" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/threePlayer"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_95sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSingle"
+        app:layout_constraintVertical_bias="0.073">
+
+        <ImageView
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_group" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/threePlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/three_players"
+        android:textColor="@color/ground"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="@+id/threePlayer"
+        app:layout_constraintStart_toStartOf="@+id/threePlayer"
+        app:layout_constraintTop_toBottomOf="@+id/threePlayer" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fourPlayer"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_95sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.839"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoPlayers"
+        app:layout_constraintVertical_bias="0.075">
+        <ImageView
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_group" />
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:id="@+id/fourPlayers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="@string/four_players"
+        android:textColor="@color/ground"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="@+id/fourPlayer"
+        app:layout_constraintStart_toStartOf="@+id/fourPlayer"
+        app:layout_constraintTop_toBottomOf="@+id/fourPlayer" />
+
+    <ImageView
+        android:id="@+id/iv_continue"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:src="@drawable/ic_continue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.908" />
+
+    <ImageView
+        android:id="@+id/iv_arrow_go"
+        android:layout_width="@dimen/_10sdp"
+        android:layout_height="@dimen/_17sdp"
+        android:src="@drawable/go_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_continue"
+        app:layout_constraintEnd_toEndOf="@+id/iv_continue"
+        app:layout_constraintStart_toStartOf="@+id/iv_continue"
+        app:layout_constraintTop_toTopOf="@+id/iv_continue" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

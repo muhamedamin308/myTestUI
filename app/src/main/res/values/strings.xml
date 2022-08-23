@@ -2,4 +2,29 @@
     <string name="app_name">My Application</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="subscription">Subscribtion</string>
+    <string name="_2_99">$ 2.99</string>
+    <string name="_50_access_to_all_categories">50% access to all categories</string>
+    <string name="playNow">play Now</string>
+    <string name="rocket_logo">Rocket Logo</string>
+    <string name="_100_access_to_all_categories">100% access to all categories</string>
+    <string name="_4_99">$ 4.99</string>
+    <string name="skip_now">Skip Now</string>
+    <string name="choose_a_category">Choose A Category</string>
+    <string name="categories_menu">Categories Menu</string>
+    <string name="category_icon">Category Icon</string>
+    <string name="entertainers_amp_artists"><![CDATA[Entertainers & Artists]]></string>
+    <string name="manage_subscriptions">Manage Subscriptions</string>
+    <string name="selected_plan">Selected Plan</string>
+    <string name="upgradenow">upgradeNow</string>
+    <string name="game_time">Game Time</string>
+    <string name="timer">timer</string>
+    <string name="_15_mins">15 mins</string>
+    <string name="_30_mins">30 mins</string>
+    <string name="_60_mins">60 mins</string>
+    <string name="choose_player">Choose Player</string>
+    <string name="single_player">Single Player</string>
+    <string name="two_players">Two Players</string>
+    <string name="four_players">Four Players</string>
+    <string name="three_players">Three Players</string>
 </resources>

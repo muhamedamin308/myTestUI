@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    app:cardCornerRadius="@dimen/_13sdp"
+    android:layout_margin="@dimen/_16sdp"
+    app:cardBackgroundColor="@color/ground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/icon_card"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:contentDescription="@string/category_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.478"
+            app:srcCompat="@drawable/ic_music" />
+
+        <TextView
+            android:id="@+id/text_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/entertainers_amp_artists"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_card"
+            app:layout_constraintStart_toEndOf="@+id/icon_card"
+            app:layout_constraintTop_toTopOf="@+id/icon_card" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

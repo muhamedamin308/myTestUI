@@ -13,7 +13,7 @@ class GameActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
-        val subscription = subscriptionSkip()
+        val subscription = subscriptionSkip(this)
         supportFragmentManager.beginTransaction().replace(R.id.gameContainer , subscription).commit()
 
     }

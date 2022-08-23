@@ -1,5 +1,6 @@
 package com.rkpandey.myapplication.ui.fragments
 
+import android.content.Context
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -11,7 +12,7 @@ import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.rkpandey.myapplication.R
 
-class SplashierScreen2 : Fragment()
+class SplashierScreen2(private val getContext : Context) : Fragment()
 {
     lateinit var handler : Handler
     override fun onCreateView(
@@ -26,9 +27,12 @@ class SplashierScreen2 : Fragment()
         {
             handler.postDelayed(
                 Runnable {
-                    val splashierScreen2 = subscriptionSkip()
-                    val transaction = fragmentManager?.beginTransaction()
-                    transaction?.replace(R.id.splashierContainer , splashierScreen2)?.commit()
+                    val subscription = subscriptionSkip(getContext)
+                    val transaction = activity?.supportFragmentManager?.beginTransaction()
+                    transaction?.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_right)
+                    transaction?.replace(R.id.splashierContainer, subscription)
+                    transaction?.disallowAddToBackStack()
+                    transaction?.commit()
                 },2500)
         }
         return view

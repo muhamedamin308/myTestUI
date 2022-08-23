@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/font/montserrat.xml" value="0.17015818725951262" />
         <entry key="app/src/main/res/layout/activity_game.xml" value="0.13467293715262932" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1640625" />
+        <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_game_timer.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_manage_subscription.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_select_players.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_splashier_screen1.xml" value="0.15" />
         <entry key="app/src/main/res/layout/fragment_splashier_screen2.xml" value="0.2" />
-        <entry key="app/src/main/res/layout/fragment_subscription_skip.xml" value="0.13467293715262932" />
+        <entry key="app/src/main/res/layout/fragment_subscription_skip.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/item_category.xml" value="0.2" />
         <entry key="app/src/main/res/layout/splashier_screen_activity.xml" value="0.1" />
       </map>
     </option>

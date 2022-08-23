@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.fragments.GameTimer">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarGameTimer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.000">
+
+        <ImageView
+            android:id="@+id/backTimer"
+            android:layout_width="@dimen/_22sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:contentDescription="@string/categories_menu"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/GameTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="@string/game_time"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_20ssp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarGameTimer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/Container15mins"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+            <ImageView
+                android:id="@+id/ic_timer15"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:src="@drawable/ic_timer"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/timer"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card15mins"
+                    android:layout_width="@dimen/_147sdp"
+                    android:layout_height="@dimen/_49sdp"
+                    app:cardBackgroundColor="@color/ground"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/_15_mins"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_24ssp"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Container30mins"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+                <ImageView
+                    android:id="@+id/ic_timer30"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/ic_timer"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/timer"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card30mins"
+                    android:layout_width="@dimen/_147sdp"
+                    android:layout_height="@dimen/_49sdp"
+                    app:cardBackgroundColor="@color/ground"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/_30_mins"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_24ssp"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Container60mins"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+                <ImageView
+                    android:id="@+id/ic_timer60"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:src="@drawable/ic_timer"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/timer"
+                    android:layout_marginBottom="@dimen/_10sdp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card60mins"
+                    android:layout_width="@dimen/_147sdp"
+                    android:layout_height="@dimen/_49sdp"
+                    app:cardBackgroundColor="@color/ground"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="@dimen/_9sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/_60_mins"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_24ssp"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
