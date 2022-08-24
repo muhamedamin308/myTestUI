@@ -23,7 +23,7 @@
 
         <ImageView
             android:id="@+id/backManage"
-            android:layout_width="@dimen/_22sdp"
+            android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_18sdp"
             android:contentDescription="@string/categories_menu"
             android:src="@drawable/ic_back" />
@@ -32,7 +32,7 @@
             android:id="@+id/manageSub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_15sdp"
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/manage_subscriptions"
             android:textColor="@color/black"
@@ -87,7 +87,7 @@
             android:textSize="@dimen/_19ssp"
             app:layout_constraintBottom_toTopOf="@+id/tv_descManage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.148"
+            app:layout_constraintHorizontal_bias="0.047"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/manageRocket"
             app:layout_constraintVertical_bias="0.0" />
@@ -102,7 +102,7 @@
             android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.261"
+            app:layout_constraintHorizontal_bias="0.083"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

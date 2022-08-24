@@ -13,6 +13,6 @@ class SplashierScreenActivity : AppCompatActivity()
         setContentView(R.layout.splashier_screen_activity)
 
         val splashierScreen1 = SplashierScreen1(this)
-        supportFragmentManager.beginTransaction().replace(R.id.splashierContainer , splashierScreen1).commit()
+        supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.splashierContainer , splashierScreen1).commit()
     }
 }

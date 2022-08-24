@@ -24,7 +24,7 @@
 
         <ImageView
             android:id="@+id/menuCategories"
-            android:layout_width="@dimen/_22sdp"
+            android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_18sdp"
             android:contentDescription="@string/categories_menu"
             android:src="@drawable/ic_menu_categories" />
@@ -33,7 +33,7 @@
             android:id="@+id/chooseCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_15sdp"
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/choose_a_category"
             android:textColor="@color/black"

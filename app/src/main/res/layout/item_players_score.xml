@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_154sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_14sdp"
+    android:backgroundTint="#3E0543"
+    android:layout_margin="@dimen/_10sdp">
+
+
+    <TextView
+        android:id="@+id/playerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_2"
+        android:textSize="@dimen/_40ssp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_semibold"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/playerNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/player_1_score"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        android:fontFamily="@font/montserrat_reqular"
+        android:layout_margin="@dimen/_10sdp"/>
+
+</com.google.android.material.card.MaterialCardView>

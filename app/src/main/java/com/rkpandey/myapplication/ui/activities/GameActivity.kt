@@ -14,7 +14,7 @@ class GameActivity : AppCompatActivity()
         setContentView(R.layout.activity_game)
 
         val subscription = subscriptionSkip(this)
-        supportFragmentManager.beginTransaction().replace(R.id.gameContainer , subscription).commit()
+        supportFragmentManager.beginTransaction().setCustomAnimations(R.anim.fade_in,R.anim.fade_out).replace(R.id.gameContainer , subscription).commit()
 
     }
 }

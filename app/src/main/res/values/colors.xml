@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ground">#5B0862</color>
     <color name="selected">#52AA5E</color>
+    <color name="alert">#FE0440</color>
+    <color name="question">#707070</color>
 </resources>

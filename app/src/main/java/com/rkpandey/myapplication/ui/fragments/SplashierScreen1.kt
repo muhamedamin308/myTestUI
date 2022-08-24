@@ -27,8 +27,7 @@ class SplashierScreen1(private val getContext : Context) : Fragment()
                 Runnable {
                 val splashierScreen2 = SplashierScreen2(getContext)
                     activity?.supportFragmentManager?.beginTransaction()
-                        ?.setCustomAnimations(R.anim.enter_right_to_left , R.anim.exit_right_to_left
-                                              , R.anim.enter_left_to_right , R.anim.exit_left_to_right)
+                        ?.setCustomAnimations(R.anim.fade_in , R.anim.fade_out)
                         ?.replace(R.id.splashierContainer, splashierScreen2)
                         ?.disallowAddToBackStack()
                         ?.commit()

@@ -27,4 +27,20 @@
     <string name="two_players">Two Players</string>
     <string name="four_players">Four Players</string>
     <string name="three_players">Three Players</string>
+    <string name="alert">Alert...!</string>
+    <string name="cancel">Cancel</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="subscribe_for_30_minutes_timer_thanks">Subscribe for 30 minutes timer…thanks!</string>
+    <string name="are_you_ready_to_stop_play_right_now">Are you ready to stop play right now?</string>
+    <string name="sport">Sport</string>
+    <string name="which_of_the_following_country_has_host_the_commonwealth_games_maximum_number_of_times">Which of the following country has host the Commonwealth Games maximum number of times?</string>
+    <string name="exit">exit</string>
+    <string name="next">next</string>
+    <string name="answer">Answer</string>
+    <string name="player_1">Player 1</string>
+    <string name="play_again">Play Again</string>
+    <string name="exit_game">Exit</string>
+    <string name="score_2">Score 2</string>
+    <string name="player_1_score">Player 1</string>
 </resources>

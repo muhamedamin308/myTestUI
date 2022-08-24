@@ -23,7 +23,7 @@
 
         <ImageView
             android:id="@+id/backSelected"
-            android:layout_width="@dimen/_22sdp"
+            android:layout_width="@dimen/_30sdp"
             android:layout_height="@dimen/_18sdp"
             android:contentDescription="@string/categories_menu"
             android:src="@drawable/ic_back"
@@ -33,7 +33,6 @@
             android:id="@+id/ChoosePlayer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_25sdp"
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/choose_player"
             android:textColor="@color/black"
