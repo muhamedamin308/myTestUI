@@ -22,6 +22,7 @@
         <entry key="app/src/main/res/layout/item_category.xml" value="0.2" />
         <entry key="app/src/main/res/layout/item_players_score.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_question.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/item_select_plaayers.xml" value="0.22" />
         <entry key="app/src/main/res/layout/splashier_screen_activity.xml" value="0.1" />
       </map>
     </option>

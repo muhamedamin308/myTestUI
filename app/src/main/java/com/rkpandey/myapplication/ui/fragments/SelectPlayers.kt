@@ -90,12 +90,12 @@ class SelectPlayers(private var getContext : Context) : Fragment()
             threePlayer.strokeWidth = 0
             threePlayer.strokeColor = resources.getColor(R.color.white)
             flag = false
-                showAlert(
-                    "Alert...!" ,
-                    "There are multiple players, the points will be added simultaneously",
-                    "Ok"
-                )
-            }
+            showAlert(
+                "Alert...!" ,
+                "There are multiple players, the points will be added simultaneously",
+                "Ok"
+            )
+        }
         backArrow.setOnClickListener {
             val gameTimer = GameTimer(getContext)
             activity?.supportFragmentManager?.beginTransaction()
