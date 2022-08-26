@@ -1,4 +1,4 @@
-package com.rkpandey.myapplication.ui.Model
+package com.rkpandey.myapplication.ui.Model.Questions
 
 data class Answers (
         var Answer : String = "",

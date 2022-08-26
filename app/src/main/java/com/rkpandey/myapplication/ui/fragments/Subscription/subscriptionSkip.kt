@@ -1,4 +1,4 @@
-package com.rkpandey.myapplication.ui.fragments
+package com.rkpandey.myapplication.ui.fragments.Subscription
 
 import android.content.Context
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.rkpandey.myapplication.R
+import com.rkpandey.myapplication.ui.fragments.GameScreens.Categories
 
 class subscriptionSkip(private val getContext : Context) : Fragment()
 {

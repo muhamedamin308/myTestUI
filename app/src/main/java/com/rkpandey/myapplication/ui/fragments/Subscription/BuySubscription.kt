@@ -1,4 +1,4 @@
-package com.rkpandey.myapplication.ui.fragments
+package com.rkpandey.myapplication.ui.fragments.Subscription
 
 import android.content.Context
 import android.os.Bundle
@@ -10,6 +10,8 @@ import android.widget.ImageView
 import android.widget.Toast
 import com.google.android.material.card.MaterialCardView
 import com.rkpandey.myapplication.R
+import com.rkpandey.myapplication.ui.fragments.GameScreens.Categories
+
 class BuySubscription(private val getContext : Context) : Fragment()
 {
     lateinit var cardSale1 : MaterialCardView

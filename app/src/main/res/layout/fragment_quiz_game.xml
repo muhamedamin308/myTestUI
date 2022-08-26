@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.fragments.QuizGame">
+    android:overScrollMode="never"
+    android:id="@+id/parent"
+    tools:context=".ui.fragments.GameScreens.QuizGame">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarQuizGame"
@@ -15,12 +16,10 @@
         android:background="@color/white"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/questionTimer2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/quizIconGame"
@@ -42,60 +41,95 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="@string/player_1"
             android:textColor="@color/ground"
-            android:textSize="@dimen/_14ssp"
-            android:fontFamily="@font/montserrat_medium"
-            android:layout_gravity="right"
-            android:layout_marginEnd="@dimen/_16sdp"/>
+            android:textSize="@dimen/_14ssp" />
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/questionTimer"
-        android:layout_width="@dimen/_40sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:src="@drawable/ic_question_time"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/questionTimer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarQuizGame"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarQuizGame" />
+        app:layout_constraintStart_toStartOf="parent">
 
-    <ImageView
+        <ImageView
+            android:id="@+id/questionTimer"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:src="@drawable/ic_question_time"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="@dimen/_10sdp"
         android:layout_height="@dimen/_14sdp"
         android:src="@drawable/ic_on_play"
-        app:layout_constraintBottom_toBottomOf="@+id/questionTimer"
+        app:layout_constraintTop_toTopOf="@+id/questionTimer"
         app:layout_constraintEnd_toEndOf="@+id/questionTimer"
         app:layout_constraintStart_toStartOf="@+id/questionTimer"
-        app:layout_constraintTop_toTopOf="@+id/questionTimer" />
+        app:layout_constraintBottom_toBottomOf="@+id/questionTimer" />
 
-    <TextView
-        android:id="@+id/questionText"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/questionContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp"
-        android:fontFamily="@font/montserrat_medium"
-        android:lineHeight="@dimen/_25sdp"
-        android:text="@string/which_of_the_following_country_has_host_the_commonwealth_games_maximum_number_of_times"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_15ssp"
-        android:textStyle="bold"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionTimer"
-        tools:targetApi="p" />
+        app:layout_constraintTop_toBottomOf="@+id/questionTimer2"
+        app:layout_constraintVertical_bias="0.000">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerQuestions"
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/montserrat_medium"
+            android:lineHeight="@dimen/_18sdp"
+            android:text="This was the first Black man to hold a high position in a Wall Street firm and was only one of four Black CEOs within Fortune 500 companies. His highest net worth was recorded in 2006 at $48 million. He is also the first Black non-broker to take charge of Merrill Lynch in the company’s history"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingPrefix"
+            tools:targetApi="p" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRecyclerContainer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/questionText"
-        app:layout_constraintVertical_bias="0.0"
+        android:orientation="vertical"
         android:overScrollMode="never"
-        tools:listitem="@layout/item_question"/>
+        app:layout_constraintBottom_toBottomOf="@+id/parent"
+        app:layout_constraintEnd_toEndOf="@+id/questionContainer"
+        app:layout_constraintStart_toStartOf="@+id/questionContainer"
+        app:layout_constraintTop_toBottomOf="@+id/questionContainer">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_question" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/linearLayout2"
@@ -112,18 +146,18 @@
             android:layout_height="@dimen/_34sdp"
             android:layout_alignParentLeft="true"
             android:layout_marginStart="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
             android:contentDescription="@string/exit"
             android:src="@drawable/ic_exit_game" />
 
         <ImageView
             android:id="@+id/next"
-            android:layout_alignParentRight="true"
             android:layout_width="@dimen/_34sdp"
             android:layout_height="@dimen/_34sdp"
+            android:layout_alignParentRight="true"
             android:layout_marginEnd="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
-            android:src="@drawable/ic_next_game"
-            android:contentDescription="@string/next"/>
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:contentDescription="@string/next"
+            android:src="@drawable/ic_next_game" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.rkpandey.myapplication.ui.fragments
+package com.rkpandey.myapplication.ui.fragments.GameScreens
 
 import android.content.Context
 import android.os.Bundle
@@ -10,7 +10,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.rkpandey.myapplication.R
-import com.rkpandey.myapplication.ui.Model.CategoriesAdapter
+import com.rkpandey.myapplication.ui.Model.Categories.CategoriesAdapter
+import com.rkpandey.myapplication.ui.fragments.Subscription.ManageSubscription
 
 class Categories (private val getContext : Context) : Fragment() , CategoriesAdapter.OnClick
 {

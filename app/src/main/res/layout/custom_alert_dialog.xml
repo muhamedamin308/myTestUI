@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/_200sdp"
+    android:layout_width="@dimen/_230sdp"
         android:layout_height="wrap_content"
+    android:id="@+id/timerAlertDialog"
     android:background="@drawable/alert_bglinear">
 
             <TextView
@@ -13,7 +14,7 @@
                 android:text="@string/alert"
                 android:textColor="@color/alert"
                 android:textSize="@dimen/_15ssp"
-                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_15sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.049"
@@ -26,10 +27,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
         android:fontFamily="@font/montserrat_medium"
         android:text="@string/subscribe_for_30_minutes_timer_thanks"
         android:textColor="@color/black"
-        android:textSize="@dimen/_13ssp"
+        android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -54,18 +56,18 @@
             android:fontFamily="@font/montserrat_semibold"
             android:text="@string/cancel"
             android:textColor="@color/ground"
-            android:textSize="@dimen/_15ssp"
+            android:textSize="@dimen/_14ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/positiveIcon"
-            app:layout_constraintHorizontal_bias="0.813"
+            app:layout_constraintHorizontal_bias="0.90"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.444" />
 
         <ImageView
             android:id="@+id/positiveIcon"
-            android:layout_width="@dimen/_85sdp"
-            android:layout_height="@dimen/_27sdp"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_20sdp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_ok"
             app:layout_constraintBottom_toBottomOf="parent"

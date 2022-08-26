@@ -1,4 +1,4 @@
-package com.rkpandey.myapplication.ui.Model
+package com.rkpandey.myapplication.ui.Model.Categories
 
 
 data class CategoriesData(

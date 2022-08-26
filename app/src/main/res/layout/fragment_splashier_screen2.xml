@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/ground"
     android:id="@+id/splashier2"
-    tools:context=".ui.fragments.SplashierScreen2">
+    tools:context=".ui.fragments.Spleshier.SplashierScreen2">
 
     <pl.droidsonroids.gif.GifImageView
         android:layout_width="@dimen/_300sdp"

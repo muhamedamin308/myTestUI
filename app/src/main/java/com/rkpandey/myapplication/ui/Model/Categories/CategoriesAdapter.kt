@@ -1,4 +1,4 @@
-package com.rkpandey.myapplication.ui.Model
+package com.rkpandey.myapplication.ui.Model.Categories
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +12,12 @@ import com.rkpandey.myapplication.R
 class CategoriesAdapter(val click : OnClick) : RecyclerView.Adapter<CategoriesAdapter.CateViewHolder>()
 {
     val categories : List<CategoriesData> = listOf(
-        CategoriesData("Random" , R.drawable.ic_random),
-        CategoriesData("Inventors & Pioneers" , R.drawable.ic_money),
-        CategoriesData("Entertainers & Artists" , R.drawable.ic_music),
-        CategoriesData("Executives & Officials" , R.drawable.ic_work),
-        CategoriesData("Sports" , R.drawable.ic_sport),
-        CategoriesData("Civil Rights" , R.drawable.ic_hand),
+        CategoriesData("Random" , R.drawable.ic_random) ,
+        CategoriesData("Inventors & Pioneers" , R.drawable.ic_money) ,
+        CategoriesData("Entertainers & Artists" , R.drawable.ic_music) ,
+        CategoriesData("Executives & Officials" , R.drawable.ic_work) ,
+        CategoriesData("Sports" , R.drawable.ic_sport) ,
+        CategoriesData("Civil Rights" , R.drawable.ic_hand) ,
         CategoriesData("Simply Amazing" , R.drawable.ic_magic)
         )
 

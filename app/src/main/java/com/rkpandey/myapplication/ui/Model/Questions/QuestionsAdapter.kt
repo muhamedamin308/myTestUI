@@ -1,11 +1,9 @@
-package com.rkpandey.myapplication.ui.Model
+package com.rkpandey.myapplication.ui.Model.Questions
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.rkpandey.myapplication.R
@@ -13,10 +11,10 @@ import com.rkpandey.myapplication.R
 class QuestionsAdapter(val click : OnClick) : RecyclerView.Adapter<QuestionsAdapter.CateViewHolder>()
 {
     var choices : List<Answers> = listOf(
-        Answers(Answer = "Amistad 1839 Revolt"),
-        Answers(Answer = "Amistaf Revolt 1859"),
-        Answers(Answer = "Amistad Revolt 1964"),
-        Answers(Answer = "Amistad Revolt 1869"),
+        Answers(Answer = "Amistad 1839 Revolt") ,
+        Answers(Answer = "Amistaf Revolt 1859") ,
+        Answers(Answer = "Amistad Revolt 1964") ,
+        Answers(Answer = "Amistad Revolt 1869") ,
     )
     class CateViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         var cardSelected : MaterialCardView = itemView.findViewById(R.id.cardQuestion)

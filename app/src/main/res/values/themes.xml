@@ -6,6 +6,7 @@
         <item name="colorPrimaryVariant">@color/ground</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorAccent">@color/ground</item>
+        <item name="android:windowAnimationStyle">@style/animations</item>
         <!-- Secondary brand color. -->
         <item name="android:navigationBarColor">@color/ground</item>
         <item name="android:colorAccent">@color/selected</item>
@@ -13,5 +14,10 @@
     <style name="Theme.MyApplication.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="animations">
+        <item name="android:windowEnterAnimation">@anim/enter_left_to_right</item>
+        <item name="android:windowExitAnimation">@anim/exit_right_to_left</item>
     </style>
 </resources>

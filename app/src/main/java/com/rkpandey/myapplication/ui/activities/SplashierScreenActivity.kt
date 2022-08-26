@@ -3,7 +3,7 @@ package com.rkpandey.myapplication.ui.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.rkpandey.myapplication.R
-import com.rkpandey.myapplication.ui.fragments.SplashierScreen1
+import com.rkpandey.myapplication.ui.fragments.Spleshier.SplashierScreen1
 
 class SplashierScreenActivity : AppCompatActivity()
 {

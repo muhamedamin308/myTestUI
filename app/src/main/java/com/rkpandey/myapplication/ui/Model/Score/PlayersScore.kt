@@ -1,4 +1,4 @@
-package com.rkpandey.myapplication.ui.Model
+package com.rkpandey.myapplication.ui.Model.Score
 
 data class PlayersScore (
         var score : Int,

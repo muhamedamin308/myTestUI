@@ -1,19 +1,19 @@
-package com.rkpandey.myapplication.ui.fragments
+package com.rkpandey.myapplication.ui.fragments.GameScreens
 
-import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
-import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
+import androidx.appcompat.content.res.AppCompatResources.getDrawable
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.card.MaterialCardView
 import com.rkpandey.myapplication.R
-import kotlinx.android.synthetic.main.custom_alert_dialog.view.*
-import kotlinx.android.synthetic.main.custom_alert_dialog_game.view.*
+import kotlinx.android.synthetic.main.custom_alert_dialog_game.*
+import kotlin.properties.Delegates
 
 class SelectPlayers(private var getContext : Context) : Fragment()
 {
@@ -23,6 +23,15 @@ class SelectPlayers(private var getContext : Context) : Fragment()
     private lateinit var fourPlayer : MaterialCardView
     private lateinit var backArrow : ImageView
     private lateinit var continueArrow : ImageView
+
+    private lateinit var gameAlertDialog : ConstraintLayout
+
+    private var designWight : Int = 375
+    private var designHeight : Int = 812
+    private var dpHeight by Delegates.notNull<Int>()
+    private var dpWidth by Delegates.notNull<Int>()
+    private var dpDesity by Delegates.notNull<Float>()
+    lateinit var dialog : Dialog
     private var flag : Boolean = false
     override fun onCreateView(
             inflater : LayoutInflater , container : ViewGroup? ,
@@ -31,12 +40,24 @@ class SelectPlayers(private var getContext : Context) : Fragment()
     {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_select_players , container , false)
+        val view2 = inflater.inflate(R.layout.custom_alert_dialog_game , container , false)
+        val displayMetrics = resources.displayMetrics
+        gameAlertDialog = view2.findViewById(R.id.gameAlertDialog)
         singlePlayer = view.findViewById(R.id.singlePlayer)
         doublePlayer = view.findViewById(R.id.twoPlayer)
         threePlayer = view.findViewById(R.id.threePlayer)
         fourPlayer = view.findViewById(R.id.fourPlayer)
         backArrow = view.findViewById(R.id.backSelected)
         continueArrow = view.findViewById(R.id.iv_continue)
+
+        dpHeight = displayMetrics.heightPixels
+        dpWidth = displayMetrics.widthPixels
+        dpDesity = displayMetrics.scaledDensity
+
+
+        val alertParams : ViewGroup.LayoutParams = gameAlertDialog.layoutParams as ViewGroup.MarginLayoutParams
+        alertParams.width = calcWidth(290f)
+
         singlePlayer.setOnClickListener {
             singlePlayer.strokeWidth = 2
             singlePlayer.strokeColor = resources.getColor(R.color.selected)
@@ -130,19 +151,21 @@ class SelectPlayers(private var getContext : Context) : Fragment()
 
     private fun showAlert(title : String , body : String , positiveText : String)
     {
-        val alert = View.inflate(getContext , R.layout.custom_alert_dialog_game , null)
-        val builder = AlertDialog.Builder(getContext)
-        builder.setView(alert)
-        val dialog = builder.create()
+        dialog = Dialog(getContext)
+        dialog.setContentView(R.layout.custom_alert_dialog_game)
         dialog.show()
-        dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+        dialog.window?.setBackgroundDrawable(getDrawable(getContext,R.drawable.alert_bglinear))
         dialog.setCancelable(false)
-        alert.alertCustomTitleGame.text = title
-        alert.alertCustomBodyGame.text = body
-        alert.negativeButtonGame.visibility = View.GONE
-        alert.positiveIconGame.text = positiveText
-        alert.positiveIconGame.setOnClickListener {
+        dialog.window?.attributes?.windowAnimations = R.style.animations
+        dialog.alertCustomTitleGame.text = title
+        dialog.alertCustomBodyGame.text = body
+        dialog.positiveIconGame.text = positiveText
+        dialog.negativeButtonGame.visibility = View.GONE
+        dialog.positiveIconGame.setOnClickListener {
             dialog.dismiss()
         }
+    }
+    private fun calcWidth(value : Float) : Int{
+        return ((dpWidth * (value / designWight)).toInt())
     }
 }
